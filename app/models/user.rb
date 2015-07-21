@@ -6,5 +6,12 @@ class User < ActiveRecord::Base
          
 
    attr_accessible :primer_nombre, :primer_apellido, :nombre_perfil,
-   					:email, :password, :password_confirmation, :remember_me
+   					:email, :password, :password_confirmation
+
+
+   	has_many :statuses
+
+   def nombre_completo
+   		primer_nombre + " " + primer_apellido
+   	end
 end
