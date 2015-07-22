@@ -17,13 +17,20 @@ class StatusesControllerTest < ActionController::TestCase
     assert_redirected_to new_user_session_path
 
   end
+  test "debe iniciar sesion para hacer un post" do
+    post :create, status: {contenido: "hola mundo"}
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
+
   test "deberia mostrar la nueva pagina cuando inicio sesion" do
-    sign_in users(:cicero)
+    sign_in users(:alatriste)
     get :new
     assert_response :success
   end
 
   test "should create status" do
+    sign_in users(:alatriste)
     assert_difference('Status.count') do
       post :create, status: { contenido: @status.contenido}
     end
