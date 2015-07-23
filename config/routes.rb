@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "perfil/show"
   devise_for :users
+  
   devise_scope :user do
     get 'registrar', to: 'devise/registrations#new', as: :registrar
     get 'comenzar', to: 'devise/sessions#new', as: :comenzar
