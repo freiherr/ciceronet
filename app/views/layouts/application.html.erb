@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ciceronet</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <title>CiceroNet - Tu red de cicerones gratuitos</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
-			<a href="#" class="navbar-brand">Ciceronet</a>
+			<a href="#" class="navbar-brand"> <img src="assets/logopp.png" width= '120' > </a>
 			<ul class="nav navbar-nav">
         		<li class="active"> <%=link_to "status",timeline_path %></li>
     		</ul>
