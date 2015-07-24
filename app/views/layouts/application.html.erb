@@ -6,29 +6,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device−width, initial−scale=1.0" />
 
 </head>
 <body>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<a href="#" class="navbar-brand"> <img src="assets/logopp.png" width= '120' > </a>
-			<ul class="nav navbar-nav">
-        		<li class="active"> <%=link_to "status",timeline_path %></li>
-    		</ul>
-    		<ul class = "nav navbar-nav pull-right">
-    			<% if user_signed_in? %>
-    				<li><%=link_to  current_user.nombre_completo, edit_user_registration_path %></li>
-    				<li><%=link_to  "Cerrar sesión", cerrar_path %></li>
-    			<% else %>
-    				<li><%=link_to  "Registrar", registrar_path %></li>
-    				<li><%=link_to  "Iniciar sesión", comenzar_path %></li>
-    			<% end %>
-    		</ul>
-		</div>
-	</div>
+    <div class="container">
+      <a href="#" class="navbar-brand"> <img src='http://k46.kn3.net/3/7/6/5/8/5/10A.png' width= '120' > </a>
+      <ul class="nav navbar-nav">
+            <li class="active"> <%=link_to "status",timeline_path %></li>
+        </ul>
+        <ul class = "nav navbar-nav pull-right">
+          <% if user_signed_in? %>
+            <li><%=link_to  current_user.nombre_completo, edit_user_registration_path %></li>
+            <li><%=link_to  "Cerrar sesión", cerrar_path %></li>
+          <% else %>
+            <li><%=link_to  "Registrar", registrar_path %></li>
+            <li><%=link_to  "Iniciar sesión", comenzar_path %></li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
 
-	<div class="container">
+	<div class="container tabla">
 
 
     <% flash.each do |type, message|%>
@@ -42,4 +43,38 @@
 	</div>
 
 </body>
+<div class="footer container"> 
+ <div class ="row socializate">
+      <div class="col-md-12 col-lg-12 col-xs-12">
+          <div class="socialw fadeInDown">  
+    <!-- Behance !-->
+
+    <!-- Facebook !-->
+    <a href="http://facebook.com/abletroner" class="facebook" target="_blank">       
+    <div class="social"><img src="http://i.imgur.com/PY2EPRW.png"/></div>
+    </a>
+    <!-- Facebook !-->
+
+    <!-- Twitter !-->
+    <a href="http://twitter.com/abletroner" target="_blank">        
+    <div class="social"> <img src="http://i.imgur.com/ny0pyqt.png"/> </div>
+    </a>
+    <!-- Twitter !-->
+
+    <!-- Intagram !-->
+    <a href="http://instagram.com/abletroner" target="_blank">      
+    <div class="social"> <img src="http://i.imgur.com/tZZG2zQ.png"/></div>
+    </a>
+    <!-- Instagram !-->
+
+    </div>
+      </div>
+  </div>
+  <div class ="row">
+      <div class="col-md-12 col-lg-12 col-xs-12">
+        <div class="derechos">© 2015 Todos los derechos reservados por <a href="#">Sergio Cámara Sevilla </a></div>
+      </div>
+  </div>
+
+</div>
 </html>

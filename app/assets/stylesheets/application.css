@@ -13,4 +13,131 @@
  *= require_tree .
  *= require_self
  */
-body { padding-top: 70px; }
+body { padding-top: 70px;
+background: #F7C093 }
+
+.footer{text-align:center;
+background: #080808;
+margin-top: 250px;
+height: auto;
+}
+.tabla{background: #FFF;}
+.derechos{color:#FFF;}
+.derechos a{color:#FF9B00;}
+
+.socialw {
+    width: 100%;
+    margin: 50px auto 0 auto;
+    overflow: auto;
+    height: 100%;
+    margin-bottom:20px;
+      margin-left: 27%
+}
+
+.social{
+  position:relative;
+    border: 1px solid #292929;
+    width: 37px;
+    height: 50px;
+    float: left;
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+.first {
+    margin-left: 0px;
+}
+
+/*    ANIMATIONS   */
+
+/* Fade In Down */
+@-webkit-keyframes fadeInDown {
+    0% {  opacity: 0;  -webkit-transform: translateY(-100px);  }    
+    100% {  opacity: 1;  -webkit-transform: translateY(0);  }
+}
+
+@-moz-keyframes fadeInDown {
+    0% {  opacity: 0;  -moz-transform: translateY(-100px);  }   
+    100% {  opacity: 1;  -moz-transform: translateY(0);  }
+}
+
+@-o-keyframes fadeInDown {
+    0% {  opacity: 0;  -o-transform: translateY(-100px);    }   
+    100% {  opacity: 1;  -o-transform: translateY(0);  }
+}
+
+@keyframes fadeInDown {
+    0% {  opacity: 0;  transform: translateY(-100px);   }   
+    100% {  opacity: 1;  transform: translateY(0);  }
+}
+
+.fadeInDown {
+    -webkit-animation: fadeInDown 1s both 0.5s;
+    -moz-animation: fadeInDown 1s both 0.5s;
+    -o-animation: fadeInDown 1s both 0.5s;
+    animation: fadeInDown 1s both 0.5s;
+}
+/* Fade In Down */
+
+/* Social Transition */
+
+.social img{
+position:absolute;
+left:0;
+top:0;
+-webkit-transition: margin-top 250ms ease-in;
+-moz-transition: margin-top 250ms ease-in;
+-o-transition:  margin-top 250ms ease-in;
+transition:  margin-top 250ms ease-in;
+}
+.social:hover img{
+margin-top:-62px;
+}
+
+.facebook{
+
+}
+
+  @media (min-width: 1000px) {
+  .socialw {
+  width: 100%;
+  margin: 50px auto 0 auto;
+  overflow: auto;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-left: 27%;
+  }}
+    
+  @media (max-width: 767px) {
+  .socialw {
+  width: 100%;
+  margin: 50px auto 0 auto;
+  overflow: auto;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-left: -13%;
+  }}
+    @media (min-width: 768px) {
+  .socialw {
+  width: 100%;
+  margin: 50px auto 0 auto;
+  overflow: auto;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  }}
+
+}
+@media (min-width: 992px) {
+  .socialw {
+  width: 100%;
+  margin: 50px auto 0 auto;
+  overflow: auto;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-left: -13%;}
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
